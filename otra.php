@@ -4,58 +4,19 @@
   <meta charset="utf-8">
   <title>jQuery UI Accordion - Sortable</title>
      <script src="js/jquery.js"></script>
-        <script src="js/jquery-ui/jquery-ui.js"></script>
-        <LINK REL="stylesheet" TYPE="text/css" HREF="js/jquery-ui/jquery-ui.css">
+     <script src="js/jquery-ui/jquery-ui.js"></script>
+     <LINK REL="stylesheet" TYPE="text/css" HREF="js/jquery-ui/jquery-ui.css">
   <style>
   /* IE has layout issues when sorting (see #5413) */
-  .group { zoom: 1 }
-  </style>
-   <script>
-  $(function() {
-    $( "button:first" ).button({
-      icons: {
-        primary: "ui-icon-locked"
-      },
-      text: false
-    }).next().button({
-      icons: {
-        primary: "ui-icon-locked"
-      }
-    }).next().button({
-      icons: {
-        primary: "ui-icon-gear",
-        secondary: "ui-icon-triangle-1-s"
-      }
-    }).next().button({
-      icons: {
-        primary: "ui-icon-gear",
-        secondary: "ui-icon-triangle-1-s"
-      },
-      text: false
-    });
-  });
-  </script>
+  .group { zoom: 0.70 }
   
-  <script>
-  $(function() {
-    $( "#accordion" )
-      .accordion({
-        header: "> div > h3"
-      })
-      .sortable({
-        axis: "y",
-        handle: "h3",
-        stop: function( event, ui ) {
-          // IE doesn't register the blur when sorting
-          // so trigger focusout handlers to remove .ui-state-focus
-          ui.item.children( "h3" ).triggerHandler( "focusout" );
- 
-          // Refresh accordion to handle new order
-          $( this ).accordion( "refresh" );
-        }
-      });
-  });
-  </script>
+/*  #accordion{
+      width: 50%;
+  }*/
+  
+  </style>
+  <script src="js/botones.js"></script>  
+  <script src="js/acordion.js"> </script>
 </head>
 <body>
  
@@ -89,12 +50,16 @@
       <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
     </div>
   </div>
-</div>
- <button>Button with icon only</button>
-<button>Button with icon on the left</button>
-<button>Button with two icons</button>
-<button>Button with two icons and no text</button>
-<button >otro</button>
+    
+  
+    
+</div><br> 
+     <button class="group">Button with icon only</button>
+<button class="group">Button with icon on the left</button>
+<button class="group">Button with two icons</button>
+<button class="group">Button with two icons and no text</button>
+<button class="group">otro</button>  
+   
  
 </body>
 </html>
