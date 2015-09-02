@@ -40,6 +40,10 @@ and open the template in the editor.
            // console.log($("input:radio[name=mio]:checked").val());
             console.log($("#radio input:checked").val());
         });
+        
+        $("#radio input").click(function (){
+            console.log($(this).val());
+        });
            
         
         </script>
